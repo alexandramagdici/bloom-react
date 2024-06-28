@@ -15,14 +15,15 @@ const Login = () => {
 
     const apiUrl = "https://bloom.realgrowsoft.com/auth/login";
     const loginData = {
-      email,
-      password,
+      usernameOrEmail: email,
+      password: password,
     };
 
     try {
       const response = await axios.post(apiUrl, loginData);
       setMessage("Login successful");
       console.log("Response data:", response.data);
+      localStorage.setItem("accessToken", response.data);
     } catch (error) {
       setMessage("Login failed");
       if (error.response) {
