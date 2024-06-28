@@ -1,0 +1,45 @@
+.cards-layer{
+    background-color: rgb(249, 250, 251);
+    height: 1000px;
+}
+.cards-container{
+    width: 100%;
+    flex-direction: column;
+}
+
+
+.item{
+    width: 700px;
+}
+
+.button-group{
+    justify-content: flex-end;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+button{
+    border-radius: 20rem !important;
+    background-color: rgb(255, 90, 95) !important;
+    border-color: rgb(255, 90, 95) !important;
+}
+
+button:hover{
+    color: rgb(255, 90, 95) !important;
+    font-weight: 500 !important;
+    background-color: white !important;
+}
+
+
+.button-group button{
+    border-radius: 20rem;
+    margin-left: 1rem;
+}
+
+.align-center{
+    justify-content: center;
+}
+
+.bold{
+    font-weight: 700;
+}

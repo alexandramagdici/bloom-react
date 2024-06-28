@@ -1,18 +1,40 @@
+import React, {useState, useEffect}  from 'react';
 import './App.css';
+import { Route , Routes , useLocation } from 'react-router-dom';
 import Login from './Components/Login/Login';
-// import Nav from './Components/Nav';
-// import Form from './Components/Form';
-// import Shop_list from './Components/Shop_list';
-// import Shop_detalis from './Components/Shop_details';
+import Navbar from './Components/Nav/Navbar';
+import FormElements from './Components/Form-elements/Form';
+import ShopList from './Components/Shop-list/ShopList';
+// import ShopDetalis from './Components/ShopDetails/ShopDetails';
 
 function App() {
+
+  const [showNavbar, setShowNavbar] = useState(true);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    // Hide navbar on login page
+    if (location.pathname === '/login') {
+      setShowNavbar(false);
+    } else {
+      setShowNavbar(true);
+    }
+  }, [location.pathname]);
+
+
   return (
     <div>
-      <Login/>
-      {/* <Nav/>
-      <Form/>
-      <Shop_list/>
-      <Shop_detalis/> */}
+    
+      {showNavbar && <Navbar />}
+      
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<ShopList />} />
+        <Route path="/create" element={<FormElements />} />
+        <Route path="/view" element={<ShopList />} />
+        {/* <Route path="/edit" element={<ShopDetails />} />*/}
+      </Routes>
     </div>
   );
 }

@@ -1,0 +1,31 @@
+.nav-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.img-logo{
+  height: 5rem;
+}
+
+.flex{
+  display: flex;
+}
+
+.btn{
+  border-radius: 3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none !important
+}
