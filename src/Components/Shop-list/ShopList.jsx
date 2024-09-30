@@ -14,8 +14,7 @@ const ShopList = () => {
     axios
       .get("https://bloom.realgrowsoft.com/merchant/getAll/DRAFT", {
         headers: {
-          Authorization:
-            "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyQGJsb29tLmNvbSIsImlhdCI6MTcxOTU3NDE2MSwiZXhwIjoxNzIwMTc4OTYxfQ.UDGOH2TEiea46UGYqXKYovxd6nSVHLDFnyMwwNSm106-OW9yGRANnOO1-cCgLCwalkSL_pzTMI4_w8gi1W8OCg",
+          Authorization: 
         },
       })
       .then((response) => {
